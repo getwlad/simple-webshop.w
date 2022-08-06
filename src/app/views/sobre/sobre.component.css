@@ -1,0 +1,13 @@
+img {
+  height: 30px;
+}
+a {
+  text-decoration: none;
+  color: #0a66c2;
+}
+
+@media screen and (max-width: 675px) {
+  mat-toolbar {
+    font-size: 0.9rem;
+  }
+}

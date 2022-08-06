@@ -1,0 +1,21 @@
+<mat-card class="container">
+  <mat-card-title>Produtos no carrinho</mat-card-title>
+  <mat-nav-list class="prod-nav">
+    <mat-list-item class="product" *ngFor="let product of productsCart">
+      <span class="prod-name">{{ product.name }}</span>
+      <span class="prod-price">{{ product.price | currency: "BRL" }}</span>
+      <a class="prod-cart-remove" mat-button (click)="removeProduct(product)">
+        <i class="material-symbols-outlined"> delete </i>
+      </a>
+    </mat-list-item>
+  </mat-nav-list>
+  <mat-card-actions>
+    <div class="total">
+      <p>Total</p>
+      <span [title]="updateTotalPrice()">{{
+        totalPriceProd | currency: "BRL"
+      }}</span>
+    </div>
+    <button mat-button class="btn-checkout">CHECKOUT</button>
+  </mat-card-actions>
+</mat-card>

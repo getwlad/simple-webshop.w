@@ -1,0 +1,26 @@
+<mat-toolbar class="header mat-elevation-z4" color="primary">
+  <button
+    mat-icon-button
+    (click)="toggleSidenav()"
+    class="showMenu"
+    [autofocus]="false"
+  >
+    <i class="material-symbols-outlined">menu</i>
+  </button>
+  <span>
+    <a>
+      <img src="assets/img/logo.png" alt="logo" class="logo" />
+    </a>
+  </span>
+  <span class="title-group" routerLink="/">
+    <a href="">
+      <i class="material-icons">{{ icon }}</i>
+      {{ title }}
+    </a>
+  </span>
+  <button mat-button class="cart-btn" (click)="toggleCart()">
+    <i class="material-symbols-outlined"> shopping_cart </i>
+  </button>
+
+  <app-cart-bar class="cart-bar" *ngIf="cart_open"></app-cart-bar>
+</mat-toolbar>

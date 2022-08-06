@@ -1,0 +1,65 @@
+<mat-card>
+  <mat-card-title> Novo Produto</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Nome"
+        [(ngModel)]="product.name"
+        name="name"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Descrição"
+        [(ngModel)]="product.description"
+        name="description"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Preco (R$)"
+        [(ngModel)]="product.price"
+        name="price"
+        required
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <div class="upload">
+        <span>Imagem</span>
+        <div class="img">
+          <img src="{{ dataimage }}" alt="imagem" />
+          <mat-toolbar class="ipt-path">
+            <input matInput [(ngModel)]="fileAttr" readonly name="fileAtr" />
+          </mat-toolbar>
+        </div>
+
+        <button mat-flat-button color="primary" class="btn-upload">
+          Carregar imagem
+        </button>
+        <input
+          type="file"
+          #fileInput
+          id="uploadFile"
+          (change)="uploadFileEvt($event)"
+          name="uploadFile"
+          multiple="multiple"
+          accept="image/*"
+        />
+      </div>
+    </mat-form-field>
+  </form>
+  <button
+    mat-raised-button
+    (click)="createProduct()"
+    type="submit"
+    id="btn-submit"
+  >
+    Salvar
+  </button>
+  <button mat-flat-button (click)="cancel()" color="warn">Cancelar</button>
+</mat-card>

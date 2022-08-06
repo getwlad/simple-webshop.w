@@ -1,0 +1,40 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    id="sidenav"
+    class="sidenav"
+    [mode]="mobile ? 'push' : 'side'"
+    [opened]="mobile ? 'false' : 'true'"
+    fixedInViewport="true"
+    fixedTopGap="64"
+  >
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/" (click)="mobile ? sidenav.toggle() : ''">
+        <i class="material-symbols-outlined">home</i>
+        Inicio
+      </a>
+      <a
+        mat-list-item
+        routerLink="/products"
+        (click)="mobile ? sidenav.toggle() : ''"
+        ><i class="material-symbols-outlined">shop</i> Produtos</a
+      >
+      <a
+        mat-list-item
+        routerLink="/products/manage"
+        (click)="mobile ? sidenav.toggle() : ''"
+        ><i class="material-symbols-outlined">shop_two</i> Gerenciar Produtos</a
+      >
+      <a
+        mat-list-item
+        routerLink="/about"
+        (click)="mobile ? sidenav.toggle() : ''"
+        ><i class="material-symbols-outlined">info</i> Sobre</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  position: fixed;
+  background-color: #c2285b;
+  z-index: 2;
+  top: 0;
+  min-height: 64px;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header .logo {
+  max-height: 65px;
+  width: 130px;
+}
+
+.header .title-group {
+  padding-left: 25px;
+}
+
+.header .title-group i {
+  padding-right: 5px;
+}
+.showMenu {
+  display: none;
+  padding: 5px;
+  z-index: 2;
+  margin-right: 10px;
+  left: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 710px) {
+  .showMenu {
+    display: inline;
+  }
+  .header .logo {
+    width: 80px;
+  }
+  .header .title-group {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header .title-group {
+    padding-left: 5px;
+  }
+  .header .logo {
+    display: none;
+  }
+}
+.cart-btn {
+  position: absolute;
+  right: 0;
+}
+.cart-bar {
+  position: absolute;
+  right: 10px;
+  top: 80px;
+  z-index: 3;
+  color: black;
+}
+button {
+  outline: none;
+}
+
+::ng-deep .mat-button-focus-overlay {
+  display: none;
+}

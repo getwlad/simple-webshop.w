@@ -1,0 +1,7 @@
+.prod-menu {
+  display: flex;
+  margin-bottom: 20px;
+}
+.prod-menu h1 {
+  font-weight: 300;
+}

@@ -1,0 +1,40 @@
+<div class="loader" *ngIf="loader">
+  <img src="../../../../assets/img/loader.gif" />
+</div>
+<mat-grid-list cols="{{ cols }}" rowHeight="400px" [gutterSize]="'15px'">
+  <mat-grid-tile *ngFor="let product of products" class="prod-container">
+    <mat-card class="prod-card">
+      <mat-card-header class="prod-header">
+        <mat-card-title class="prod-title">{{ product.name }}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="{{ product.img }}"
+        alt="foto"
+        class="prod-image"
+      />
+      <mat-card-content class="prod-details">
+        <p class="description">
+          {{ product.description }}
+        </p>
+        <span class="prod-price">{{ product.price | currency: "BRL" }}</span>
+      </mat-card-content>
+      <mat-card-actions class="prod-buttons">
+        <button mat-button (click)="onAddToCart(product)">
+          <i
+            [@buttonTextStateTrigger]="
+              product.id == toCartElement ? 'transitioning' : 'shown'
+            "
+            class="material-symbols-outlined"
+          >
+            {{ product.id == toCartElement ? toCartText : buttonText }}</i
+          >
+        </button>
+
+        <button mat-button>
+          <i class="material-symbols-outlined">shopping_cart_checkout</i>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

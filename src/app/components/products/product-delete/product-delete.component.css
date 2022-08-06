@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 20px 15px 0px 0px;
+  background-color: #c2285b;
+  color: #fff;
+}
+label {
+  color: #c2285b !important;
+}
+
+input:focus + label {
+  color: #c2285b !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #c2285b !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #c2285b !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: #c2285b !important;
+}
+.ipt-path {
+  display: none;
+}
+.img img {
+  max-height: 200px;
+  max-width: 100%;
+  object-position: center;
+}

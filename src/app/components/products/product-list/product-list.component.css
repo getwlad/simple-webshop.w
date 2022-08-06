@@ -1,0 +1,77 @@
+mat-grid-list {
+  padding: 30px;
+}
+mat-card {
+  width: 100%;
+}
+
+.prod-title {
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.prod-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+mat-card-content.prod-details {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+mat-card-header.prod-header {
+  margin-top: 10px;
+}
+p.description {
+  overflow: scroll;
+  height: 120px;
+}
+mat-card-actions.prod-buttons {
+  margin-bottom: 12px !important;
+}
+.prod-container .prod-image {
+  height: 180px;
+  max-width: 100%;
+  padding: 0px 10px 0px 10px;
+}
+.prod-container .prod-card {
+  padding: 15px;
+}
+.prod-price {
+  color: #00a650;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.prod-buttons button {
+  color: #00a650;
+  margin-right: 10px;
+  width: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.prod-buttons button:hover,
+.prod-buttons button:hover:active {
+  background-color: #00a650;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.clicked {
+  background-color: #00a650;
+}
+@media (hover: none) {
+  .prod-buttons button:hover {
+    color: #00a650;
+    background-color: initial;
+  }
+}

@@ -1,0 +1,51 @@
+<div class="prod-menu">
+  <h1>Gestão de Produtos</h1>
+  <button
+    mat-raised-button
+    color="primary"
+    class="btn-novo-produto"
+    (click)="navigateToCreateProduct()"
+  >
+    <i class="material-symbols-outlined"> add </i><span>Novo Produto</span>
+  </button>
+</div>
+<div class="loader" *ngIf="loader">
+  <img src="../../../../assets/img/loader.gif" />
+</div>
+<mat-grid-list cols="{{ cols }}" rowHeight="400px" [gutterSize]="'15px'">
+  <mat-grid-tile *ngFor="let product of products" class="prod-container">
+    <mat-card class="prod-card">
+      <mat-card-header class="prod-header">
+        <mat-card-title class="prod-title">{{ product.name }}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="{{ product.img }}"
+        alt="foto"
+        class="prod-image"
+      />
+      <mat-card-content class="prod-details">
+        <p class="description">
+          {{ product.description }}
+        </p>
+        <span class="prod-price">{{ product.price | currency: "BRL" }}</span>
+      </mat-card-content>
+      <mat-card-actions class="prod-buttons">
+        <button
+          mat-button
+          class="update"
+          routerLink="/products/update/{{ product.id }}"
+        >
+          <i class="material-symbols-outlined">edit</i>
+        </button>
+        <button
+          mat-button
+          class="delete"
+          routerLink="/products/delete/{{ product.id }}"
+        >
+          <i class="material-symbols-outlined">delete</i>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
