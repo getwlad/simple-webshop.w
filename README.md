@@ -1,5 +1,5 @@
 # Simple Webshop V2
-Uma webshop simples baseado em outro projeto pessoal meu, totalmente responsivo e 
+Um webshop simples baseado em outro projeto pessoal meu, totalmente responsivo e 
 conta com um CRUD completo.\
 A lista de produtos é obtida a partir de uma api rest desenvolvida por mim. \
 Utilizei a api do imgur pra upload de imagens.
