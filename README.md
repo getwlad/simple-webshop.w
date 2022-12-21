@@ -9,7 +9,7 @@ Utilizei a api do imgur pra upload de imagens.
  Excluir um produto.\
  Adicionar produtos no carrinho.
 ## Visualizar projeto em funcionamento
-[https://simple-webshopv2.vercel.app/](https://simple-webshopv2.vercel.app/)
+[https://simple-webshop-v2.vercel.app/](https://simple-webshop-v2.vercel.app/)
 
 ## Layout Mobile
 ![Web 2](https://github.com/getwlad/assets/blob/main/simpleWebV2Mob.png)
