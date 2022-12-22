@@ -9,7 +9,7 @@ import { Product } from "../models/product-model";
   providedIn: "root",
 })
 export class ProductService {
-  baseUrl = "https://rest-api-products-production.up.railway.app/products";
+  baseUrl = "https://rest-api-products.cyclic.app/products";
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
