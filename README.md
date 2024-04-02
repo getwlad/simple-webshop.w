@@ -1,4 +1,4 @@
-# Simple Webshop V2
+# Simple Webshop
 Um webshop simples baseado em outro projeto pessoal meu, totalmente responsivo e 
 conta com um CRUD completo.\
 A lista de produtos é obtida a partir de uma api rest desenvolvida por mim. \
