@@ -33,6 +33,12 @@ p.description {
 mat-card-actions.prod-buttons {
   margin-bottom: 12px !important;
 }
+.prod-container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
 .prod-container .prod-image {
   height: 180px;
   max-width: 100%;

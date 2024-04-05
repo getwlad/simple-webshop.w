@@ -27,6 +27,7 @@ import { SobreComponent } from './views/sobre/sobre.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { CartBarComponent } from './components/cart/cart-bar/cart-bar.component';
+import { NotFoundComponent } from './views/not-found/not-found.component';
 
 
 
@@ -52,6 +53,7 @@ import { CartBarComponent } from './components/cart/cart-bar/cart-bar.component'
     ProductDeleteComponent,
     SobreComponent,
     CartBarComponent,
+    NotFoundComponent,
 
 
   ],
