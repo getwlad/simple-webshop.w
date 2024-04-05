@@ -9,9 +9,12 @@ import { Product } from "../models/product-model";
   providedIn: "root",
 })
 export class ProductService {
-  baseUrl = "https://rest-api-products.cyclic.app/products";
+  baseUrl = "https://rest-api-products.up.railway.app/products";
 
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
+  constructor(
+    private http: HttpClient,
+    private snackBar: MatSnackBar
+  ) {}
 
   showMsg(msg: string, isError: boolean = false) {
     this.snackBar.open(msg, "X", {
@@ -65,7 +68,7 @@ export class ProductService {
   }
 
   upload(formdata: FormData): Observable<any> {
-    let client_id = "127397a48dc86cb";
+    let client_id = "764b1680eee9ed4";
     const headers = new HttpHeaders({
       authorization: `Client-ID ${client_id}`,
     });
